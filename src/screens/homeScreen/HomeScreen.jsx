@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
-import { Dimensions, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { BackButton } from '../../core/components/BackButton';
 import { HomeItem } from './components/Item';
+import { Layout } from '../../core/components/layouts/MainLayout';
 
 export const HomeScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
+    <Layout style={styles.container}>
       <View style={styles.topTileContainer}>
         <View style={styles.topTileRow}>
           <View style={styles.BackBtn}>
@@ -62,11 +63,11 @@ export const HomeScreen = () => {
           </TouchableOpacity>
         </View>
       </View>
-    </SafeAreaView>
+    </Layout>
   );
 };
 
-const { width, height } = Dimensions.get('window')
+const { width, height } = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -75,90 +76,89 @@ const styles = StyleSheet.create({
   topTileContainer: {
     flex: 3,
     backgroundColor: '#FFA489',
-    flexDirection: "column-reverse",
+    flexDirection: 'column-reverse',
     paddingHorizontal: width * 0.05,
     paddingBottom: width * 0.01,
   },
-  topTileRow: { flexDirection: "row", justifyContent: "space-between" },
+  topTileRow: { flexDirection: 'row', justifyContent: 'space-between' },
   btnArea: {
     width: width * 0.1,
     borderRadius: 12,
-    display: "none",
+    display: 'none',
   },
   BackBtn: {
     width: width * 0.2,
     height: width * 0.06,
-    justifyContent: "center",
+    justifyContent: 'center',
   },
   screenTitle: {
     fontSize: 24,
-    fontWeight: "700",
+    fontWeight: '700',
   },
   topTileThing: {
     backgroundColor: '#5ADCB6',
     width: width * 0.2,
     height: width * 0.06,
-    alignSelf: "flex-end",
+    alignSelf: 'flex-end',
     borderRadius: 12,
   },
 
   mainView: {
     flex: 17,
-    backgroundColor: "#f0f0f0f0",
+    backgroundColor: '#f0f0f0f0',
 
     paddingBottom: height * 0.09,
   },
   storeLine: {
     height: height * 0.04,
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     backgroundColor: '#fff',
     paddingHorizontal: width * 0.05,
     marginBottom: 2,
   },
   storeLine1: {
     height: height * 0.05,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    backgroundColor: "#f0f0f0f0",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: '#f0f0f0f0',
     paddingHorizontal: width * 0.05,
     marginBottom: 2,
   },
   storeLineRows: {
-    alignItems: "center",
-    flexDirection: "row",
+    alignItems: 'center',
+    flexDirection: 'row',
   },
   reports: {
     width: width * 1,
     height: width * 0.3,
     marginTop: width * 0.02,
-    flexDirection: "row",
+    flexDirection: 'row',
   },
   reportBtn1: {
     width: width / 3,
     height: width * 0.3,
     backgroundColor: '#fff',
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   reportBtn2: {
     width: width / 3,
     height: width * 0.3,
     backgroundColor: '#fff',
-    borderLeftColor: "#f0f0f0f0",
-    borderRightColor: "#f0f0f0f0",
+    borderLeftColor: '#f0f0f0f0',
+    borderRightColor: '#f0f0f0f0',
     borderTopColor: '#fff',
     borderBottomColor: '#fff',
     borderWidth: 2,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   reportBtn3: {
     width: width / 3,
     height: width * 0.3,
     backgroundColor: '#fff',
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
-
