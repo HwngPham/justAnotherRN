@@ -11,7 +11,7 @@ import { ProductStack } from './stacks/ProductStack';
 const MainNavigator = createBottomTabNavigator();
 const { width, height } = Dimensions.get('window');
 
-const MainNavigation = () => {
+export const MainNavigation = () => {
   return (
     <MainNavigator.Navigator screenOptions={styles.screenOptions}>
       <MainNavigator.Screen
@@ -49,8 +49,6 @@ const MainNavigation = () => {
     </MainNavigator.Navigator>
   );
 };
-
-export default MainNavigation;
 
 const styles = StyleSheet.create({
   screenOptions: {
